@@ -54,7 +54,7 @@
             <targetReference>Hello</targetReference>
         </connector>
     </start>
-    <status>Active</status>
+    <status>Obsolete</status>
     <subflows>
         <name>helloworldSubflow</name>
         <label>helloworldSubflow</label>
