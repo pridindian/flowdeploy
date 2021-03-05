@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>51.0</apiVersion>
+    <interviewLabel>Hello World {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Hello World</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <screens>
+        <description>Hello World</description>
+        <name>Hello</name>
+        <label>Hello</label>
+        <locationX>176</locationX>
+        <locationY>158</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>helloworldSubflow</targetReference>
+        </connector>
+        <fields>
+            <name>Hello_World</name>
+            <dataType>String</dataType>
+            <defaultValue>
+                <elementReference>varHelloWorld</elementReference>
+            </defaultValue>
+            <fieldText>Hello World</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Hello</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <name>helloworldSubflow</name>
+        <label>helloworldSubflow</label>
+        <locationX>176</locationX>
+        <locationY>278</locationY>
+        <flowName>subflow</flowName>
+    </subflows>
+    <variables>
+        <name>varHelloWorld</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>Hello</stringValue>
+        </value>
+    </variables>
+</Flow>
